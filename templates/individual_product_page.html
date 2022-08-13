@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block product_page_ind %}
+{% include "header.html" %}
+
+    {% for field in product %}
+
+        <main class="container_q">
+          <!-- Left Column -->
+          <div class="left-column">
+            <img data-image="red" class="active" src="{{field.image.url}}" alt="">
+          </div>
+          <!-- Right Column -->
+          <div class="right-column">
+            <div class="product-description">
+              <span>{{field.model}}</span>
+              <h1>Size</h1>
+              <p>{{field.size}}</p>
+              <h1>Standard thickness</h1>
+              <p>{{field.standard_thinckness}}</p>
+              <h1>Finish</h1>
+              <p>{{field.finish}}</p>
+            </div>
+          </div>
+        </main>
+        
+    {% endfor %}
+{% include "footer.html" %}
+{% endblock product_page_ind %}

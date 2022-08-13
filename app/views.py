@@ -32,3 +32,8 @@ def product(request,id):
 
 def aboutus(request):
     return render(request,"aboutus.html")
+
+def ind_product(request,id):
+    data=product_s.objects.filter(product_id=id)
+    context={"product":data}    
+    return render(request,'individual_product_page.html',context)

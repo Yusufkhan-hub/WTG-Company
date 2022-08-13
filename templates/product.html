@@ -20,7 +20,7 @@
                         <div class="product-image">
                             <img src="{{field.image.url}}" alt="">
                             <div class="overlay">
-                                <a href="#"> <h5>Check more.</h5></a>
+                                <a href="{% url 'ind_product' field.product_id %}"> <h5>Check more.</h5></a>
                                 {% comment %} <i class="fas fa-shopping-bag"></i>
                                 <i class="far fa-heart"></i>
                                 <i class="fas fa-search"></i> {% endcomment %}
